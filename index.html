@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coelhinhos Engraçadinhos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <audio id="background-audio" autoplay loop muted>
+        <source src="img/pinoquio.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    
+    <button id="audio-toggle" onclick="toggleAudio()">Tocar Música</button>
+
+
+    <!-- Parallax Container -->
+    <div class="parallax"></div>
+
+    <!-- Container da Home Page -->
+    <div class="container">
+        <!-- Introdução -->
+        <h1>Bem-vindo ao bosque dos Coelhinhos Engraçadinhos!</h1>
+        <p>Convidamos você a conhecer a nossa fábrica de ovos de Páscoa!</p>
+
+        <!-- Animação do Coelho e sombra -->
+        <div class="coelho-container">
+            <img src="img/coelhinho-pulando.png" alt="Coelho pulando" class="coelho-pulando">
+            <div class="sombra"></div>
+        </div>
+
+        <!-- Links para as outras seções -->
+        <div class="botoes">
+            <a href="projetospascoa.html"><button>Projetos de Páscoa</button></a>
+            <a href="jogos.html"><button>Jogos Interativos</button></a>
+            <a href="sobre-pascoa.html"><button>Sobre a Páscoa</button></a>
+        </div>
+    </div>
+
+
+      <!-- Descrição do jogo -->
+    <h1>Caça aos Ovos</h1>
+    <p>Encontre todos os ovos escondidos na floresta!</p>
+
+    <!-- Área de jogo -->
+    <div class="area-jogo">
+        <!-- Ovos escondidos -->
+        <img src="img/ovinho1.png" alt="Ovo 1" class="ovo" id="ovo1">
+        <img src="img/ovinho2.png" alt="Ovo 2" class="ovo" id="ovo2">
+        <img src="img/ovinho3.png" alt="Ovo 3" class="ovo" id="ovo3">
+        <img src="img/ovinho4.png" alt="Ovo 4" class="ovo" id="ovo4">
+        <img src="img/ovinho5.png" alt="Ovo 5" class="ovo" id="ovo5">
+        <img src="img/ovinho6.png" alt="Ovo 6" class="ovo" id="ovo6">
+        <img src="img/ovinho7.png" alt="Ovo 7" class="ovo" id="ovo7">
+        <img src="img/ovinho8.png" alt="Ovo 8" class="ovo" id="ovo8">
+        <img src="img/ovinho1.png" alt="Ovo 9" class="ovo" id="ovo9">
+        <img src="img/ovinho2.png" alt="Ovo 10" class="ovo" id="ovo10">
+        <img src="img/ovinho3.png" alt="Ovo 11" class="ovo" id="ovo11">
+        <img src="img/ovinho4.png" alt="Ovo 12" class="ovo" id="ovo12">
+        <img src="img/ovinho5.png" alt="Ovo 13" class="ovo" id="ovo13">
+        <img src="img/ovinho6.png" alt="Ovo 14" class="ovo" id="ovo14">
+        <img src="img/ovinho7.png" alt="Ovo 15" class="ovo" id="ovo15">
+        <img src="img/ovinho8.png" alt="Ovo 16" class="ovo" id="ovo16">
+        <img src="img/ovinho1.png" alt="Ovo 17" class="ovo" id="ovo17">
+        <img src="img/ovinho2.png" alt="Ovo 18" class="ovo" id="ovo18">
+        <img src="img/ovinho3.png" alt="Ovo 19" class="ovo" id="ovo19">
+        <img src="img/ovinho4.png" alt="Ovo 20" class="ovo" id="ovo20">
+
+        <!-- coelhinho -->
+        <img src="img/coelho-cesta-ovos.png" alt="Coelhinho com cesta" class="coelhinho" id="coelhinho">
+    </div>
+
+    <!-- Painel de pontuação -->
+    <div class="painel-pontuacao">
+        <p><span id="pontuacao">0/20</span></p>
+        <img src="img/ovinho8.png" alt="Ícone de ovo" class="ovo-icone">
+    </div>
+
+
+     <!-- Seção de Introdução ao Livro de Receitas -->
+     <div id="livro-receitas" class="livro-receitas-container">
+        <h2>Bem-vindo ao Livro de Receitas dos Coelhinhos Engraçadinhos!</h2>
+        <p>Descubra as delícias que os nossos coelhinhos prepararam especialmente para a Páscoa!</p>
+        <div class="coelhinhos-cozinhando">
+            <img src="img/coelhinhosfazendochocolate.gif" alt="Coelhinhos cozinhando">
+        </div>
+    </div>
+
+    <!-- Seção dos Cartões de Receitas -->
+    <div id="receitas" class="receitas-container">
+        <div class="cartao-receita" onclick="abrirReceita('bolo-cenoura')">
+            <img src="img/bolo-cenoura.jpg" alt="Bolo de Cenoura">
+            <p>Bolo de Cenoura</p>
+        </div>
+        <div class="cartao-receita" onclick="abrirReceita('ovinhos-chocolate')">
+            <img src="img/ovinhos-chocolate.jpg" alt="Ovinhos de Chocolate">
+            <p>Ovinhos de Chocolate</p>
+        </div>
+        <div class="cartao-receita" onclick="abrirReceita('torta-maca')">
+            <img src="img/torta-maca.jpg" alt="Torta de Maçã">
+            <p>Torta de Maçã</p>
+        </div>
+        <div class="cartao-receita" onclick="abrirReceita('pao-lo-pascoa')">
+            <img src="img/pao-lo-pascoa.jpg" alt="Pão de Ló de Páscoa">
+            <p>Pão de Ló de Páscoa</p>
+        </div>
+        <div class="cartao-receita" onclick="abrirReceita('colomba-pascal')">
+            <img src="img/colomba-pascal.jpg" alt="Colomba Pascal">
+            <p>Colomba Pascal</p>
+        </div>
+        <div class="cartao-receita" onclick="abrirReceita('folar-pascoa')">
+            <img src="img/folar-pascoa.jpg" alt="Folar de Páscoa">
+            <p>Folar de Páscoa</p>
+        </div>
+    </div>
+
+    <!-- Modal para Exibição de Receita em Tela Cheia -->
+    <div id="modal-receita" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharReceita()">&times;</span>
+            <h2 id="titulo-receita"></h2>
+            <h3>Ingredientes</h3>
+            <ul id="ingredientes-receita"></ul>
+            <h3>Instruções</h3>
+            <p id="instrucoes-receita"></p>
+        </div>
+    </div>
+
+    <!-- Seção de História do Curta "Coelhinhos Engraçadinhos" -->
+<div id="historia" class="historia-container">
+    <h2>A História de "Coelhinhos Engraçadinhos" (1934)</h2>
+    <div class="imagem-historia">
+        <img src="img/coelhinhos-engracadinhos.webp" alt="Coelhinhos Engraçadinhos">
+    </div>
+    <p>
+        "Coelhinhos Engraçadinhos" é um clássico curta-metragem da Disney lançado em 1934. 
+        Em Funny Little Bunnies, somos levados a um passeio mágico pelo bosque encantado dos coelhinhos da Páscoa, que trabalham incansavelmente na preparação dos ovinhos de chocolate . Cada um exerce um papel distinto na linha de produção dos ovinhos, tudo isso ao som de uma trilha sonora motivacional para os trabalhadores da Páscoa. O curta animado foi produzido pelo Walt Disney e é uma obra adorada por gerações e um verdadeiro marco na animação!
+    </p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; Bárbara2024. Todos os direitos reservados.</p>
+</footer>
+
+
+    <!-- Script de folhas e flores -->
+    <script src="script.js"></script>
+</body>
+</html>

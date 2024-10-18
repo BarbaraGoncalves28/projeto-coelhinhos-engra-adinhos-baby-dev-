@@ -1,0 +1,567 @@
+/* Adicionando as fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script&display=swap');
+
+/* Efeito Parallax */
+.parallax {
+    background-image: url('img/fundo.jpg'); /* Substitua pelo caminho correto */
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+*{
+    border: none;
+    outline: none;
+    outline-color: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Pacifico', cursive; 
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root {
+    --cor-fundo: #FFFAF0;
+    --cor-principal: #FFF68F; 
+    --cor-secundaria: #B2EBAE; 
+    --cor-acento: #FFB3BA; 
+    --cor-texto: #6F4C3E; 
+    --cor-sombra: rgba(0, 0, 0, 0.1); 
+}
+
+#controls {
+    margin-top: 20px;
+    margin-left: 4rem;
+}
+
+.container {
+    text-align: center;
+    padding: 50px 20px;
+    z-index: 1;
+    position: relative;
+}
+
+h1, h3 {
+    font-family: 'Dancing Script'; 
+    color: var(--cor-acento);
+}
+
+p {
+    color: var(--cor-principal);
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+/* Animação do Coelho */
+.coelho-container {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.coelho-pulando {
+    width: 250px;
+    animation: puloCoelho 4s ease-in-out infinite;
+}
+
+@keyframes puloCoelho {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Sombra animada */
+.sombra {
+    width: 100px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    left: 25px;
+    animation: sombraCoelho 4s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes sombraCoelho {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(0.8); opacity: 0.2; }
+}
+
+/* Estilos dos botões de navegação */
+button{
+    font-family: 'Dancing Script'; 
+}
+
+.botoes {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.botoes button {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto);
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.botoes button:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* Estilos para as folhas animadas */
+.folha-animada {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 100px;
+    animation: cairFolha 5s linear forwards;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Estilos específicos para folhas */
+.folha-animada.folha {
+    background-image: url('img/folha-vintage.png');
+}
+
+/* Estilos específicos para flores */
+.folha-animada.flor {
+    background-image: url('img/flores-vintage.png');
+    width: 30px;
+    height: 30px;
+}
+
+/* Animação de queda */
+@keyframes cairFolha {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(500px); }
+}
+
+
+
+/* CAÇA AOS OVOOOOOOOOOOS */
+
+/* Estilo para a área do jogo */
+
+h1, p{
+    text-align: center;
+}
+
+.area-jogo {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background: url('img/fundo-vintage.jpg') no-repeat center center/cover;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+/* Estilo dos ovos */
+.ovo {
+    position: absolute;
+    width: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.ovo:hover {
+    transform: scale(1.2);
+}
+
+/* Estilo para o ícone de ovo */
+.ovo-icone {
+    width: 30px;
+    vertical-align: middle;
+}
+
+/* Estilo do coelhinho com cesta */
+.coelhinho {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 100px;
+}
+
+/* Painel de pontuação */
+.painel-pontuacao {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.painel-pontuacao p {
+    color: var(--cor-acento);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.mensagem-vitoria {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+    color: var(--cor-texto);
+    z-index: 10;
+}
+
+
+/*LIVRO DE RECEITAAAS*/
+
+/* Estilo da Introdução e Imagem */
+.livro-receitas-container {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.livro-receitas-container h2 {
+    font-size: 2rem;
+    color: var(--cor-acento);
+}
+
+.livro-receitas-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.coelhinhos-cozinhando img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo dos cartões de receitas */
+.receitas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-top: 30px;
+}
+
+.cartao-receita {
+    width: 200px;
+    margin: 15px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: flutuar 2s ease-in-out infinite; /* Efeito de flutuação */
+}
+
+.cartao-receita:hover {
+    transform: scale(1.05);
+}
+
+.cartao-receita img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Keyframes para animação de flutuação */
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Estilo do Modal (Tela cheia para a receita) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    text-align: left;
+    position: relative;
+    z-index: 10; 
+}
+
+#instrucoes-receita{
+    color: var(--cor-texto);
+}
+
+.close-btn {
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Estilo da seção História */
+.historia-container {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.historia-container h2 {
+    font-size: 2rem;
+    color: var(--cor-principal);
+}
+
+.historia-container p {
+    color: var(--cor-texto);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Estilo da imagem na seção História */
+.imagem-historia img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    animation: flutuar 2s ease-in-out infinite;
+}
+
+/* Keyframes para animação de flutuar */
+@keyframes flutuar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Estilo para o footer */
+footer {
+    background-color: var(--cor-acento);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: var(--cor-texto);
+    margin: 0;
+    font-size: 1rem;
+}
+
+
+
+
+
+/* RESPONSIVIDADE DO HOME PAGE */
+
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 1.2rem;
+    }
+
+    .coelho-pulando {
+        width: 200px;
+    }
+
+    .botoes {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #controls {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .coelho-pulando {
+        width: 150px;
+    }
+
+    .botoes button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #controls {
+        margin-left: 0.5rem;
+    }
+}
+
+/*----------------------------*/
+
+
+/* RESPONSIVIDADE DA ÁREA DE JOGOS */
+
+@media screen and (max-width: 768px) {
+    .area-jogo {
+        height: 300px;
+    }
+
+    .ovo {
+        width: 30px;
+    }
+
+    .coelhinho {
+        width: 60px;
+    }
+
+    .painel-pontuacao {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .area-jogo {
+        height: 250px;
+    }
+
+    .ovo {
+        width: 25px;
+    }
+
+    .coelhinho {
+        width: 50px;
+    }
+
+    .painel-pontuacao {
+        font-size: 1rem;
+    }
+}
+
+
+/* ------------------- */
+
+
+/* RESPONSIVIDADE LIVRO DE RECEITAS */
+
+@media (max-width: 768px) {
+    .coelhinhos-cozinhando img {
+        max-width: 200px;
+    }
+
+    .cartao-receita {
+        width: 150px;
+        margin: 10px;
+    }
+
+    .modal-content {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .livro-receitas-container p {
+        font-size: 1rem;
+    }
+
+    .coelhinhos-cozinhando img {
+        max-width: 150px;
+    }
+
+    .cartao-receita {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .modal-content {
+        max-width: 90%;
+    }
+}
+
+/* ----------------- */
+
+
+/* RESPONSIVIDADE NA SEÇÃO HISTÓRIA E FOOTER */
+
+@media (max-width: 768px) {
+    .historia-container p {
+        width: 80%;
+        font-size: 1rem;
+        padding: 30px;
+    }
+
+    .historia-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .imagem-historia img {
+        max-width: 250px;
+    }
+}
+
+/* Para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+    .historia-container p {
+        width: 90%;
+        font-size: 0.9rem;
+        padding: 20px;
+    }
+
+    .historia-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .imagem-historia img {
+        max-width: 200px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ----------------------- */

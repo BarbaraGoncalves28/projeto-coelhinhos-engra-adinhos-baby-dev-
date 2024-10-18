@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida de Coelhinhos</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="corrida.css">
+</head>
+<body>
+
+    <div class="background-blur"></div>
+
+    <h1>Corrida de Coelhinhos!</h1>
+    <div class="game-container">
+        <div id="contador">3</div>
+        <div id="pista" class="pista">
+            <img id="coelho1" class="coelho" src="img/coelhinho-com-varinha.png" alt="Coelho 1">
+            <img id="coelho2" class="coelho" src="img/coelhinho-com-cestinha.png" alt="Coelho 2">
+            <img id="coelho3" class="coelho" src="img/coelhinho-andando.png" alt="Coelho 3">
+        </div>
+        <div id="resultado"></div>
+        <div class="pontos">
+            <p>Pontos do Coelho 1: <span id="pontos-coelho1">0</span></p>
+            <p>Pontos do Coelho 2: <span id="pontos-coelho2">0</span></p>
+            <p>Pontos do Coelho 3: <span id="pontos-coelho3">0</span></p>
+        </div>
+
+        <a href="jogos.html"><button class="voltar">Voltar</button></a>
+    </div>
+
+    <script src="corrida.js"></script>
+</body>
+</html>

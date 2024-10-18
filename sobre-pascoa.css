@@ -1,0 +1,193 @@
+/* Adicionando as fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script&display=swap');
+
+
+*{
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: url('img/fundo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Pacifico', cursive;
+    overflow-x: hidden;
+}
+
+:root {
+    --cor-fundo: #FFFAF0;
+    --cor-principal: #FFF68F; 
+    --cor-secundaria: #B2EBAE;
+    --cor-acento: #FFB3BA;
+    --cor-texto: #6F4C3E; 
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --cor-vermelho-pastel: #FF6F61;
+}
+
+#sobre-pascoa {
+    font-size: 1.1rem;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    color: var(--cor-texto);
+    text-align: center;
+}
+
+#sobre-pascoa h2 {
+    font-family: 'Dancing Script';
+    font-size: 2em;
+    color: var(--cor-vermelho-pastel);
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    gap: 2rem;
+}
+
+.floating-image {
+    width: 140px;
+    height: 140px;
+    animation: float 5s ease-in-out infinite;
+    position: relative;
+}
+
+/* Movimento de flutuação vertical */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-80px); /* Aumentei o deslocamento vertical */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Movimento lateral */
+@keyframes sideMove {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px); /* Aumentei o deslocamento lateral */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* Estilos para as folhas animadas */
+.folha-animada {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 100px;
+    animation: cairFolha 5s linear forwards;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Estilos específicos para folhas */
+.folha-animada.folha {
+    background-image: url('img/ovinho4.png');
+}
+
+/* Estilos específicos para flores */
+.folha-animada.flor {
+    background-image: url('img/ovinho6.png');
+    width: 30px;
+    height: 30px;
+}
+
+/* Animação de queda */
+@keyframes cairFolha {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(500px); }
+}
+
+button {
+    position: relative;
+    background-color: var(--cor-acento);
+    color: var(--cor-texto);
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 20px auto;
+    display: block;
+}
+
+button:hover {
+    background-color: var(--cor-secundaria);
+}
+
+
+/* RESPONSIVIDADE DE SOBRE A PÁSCOA */
+
+@media (max-width: 900px) {
+    .content{
+        max-width: 400px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .floating-image{
+        max-width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 750px) {
+    #sobre-pascoa h2{
+        margin-top: 10rem;
+    }
+
+    .floating-image{
+        max-width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 640px){
+    .content{
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* ---------------- */
+
+
+
+
+

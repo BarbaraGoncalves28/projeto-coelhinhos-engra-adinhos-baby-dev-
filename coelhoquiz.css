@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script&display=swap');
+
+*{
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Pacifico', cursive;
+    background-image: url('img/fundo.jpg'); 
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+:root {
+    --cor-fundo: #FFFAF0; 
+    --cor-principal: #FFF68F; 
+    --cor-secundaria: #B2EBAE; 
+    --cor-acento: #FFB3BA; 
+    --cor-texto: #6F4C3E; 
+    --cor-sombra: rgba(0, 0, 0, 0.1); 
+    --cor-vermelho-pastel: #FF6F61;
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 70px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: var(--cor-vermelho-pastel);
+}
+
+#opcoes {
+    margin: 20px 0;
+}
+
+#pergunta{
+    color: var(--cor-texto);
+    font-size: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    font-family: 'Dancing Script';
+    margin: 5px;
+    padding: 3px 8px;
+    font-size: 1.4rem;
+    background-color: var(--cor-acento);
+    color: var(--cor-texto);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--cor-principal);
+}
+
+.resultado {
+    font-size: 20px;
+    margin: 20px 0;
+    color: var(--cor-texto);
+}
+
+#contagem-ovinhos{
+    color: var(--cor-texto);
+    font-size: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+
+#proxima-pergunta{
+    display: inline-block;
+    font-family: 'Dancing Script';
+    margin: 5px;
+    padding: 4px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--cor-vermelho-pastel);
+    color: var(--cor-texto);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#ovinhos {
+    margin-top: 20px;
+    margin-bottom: 5rem;
+    font-size: 18px;
+}
+
+#ovo-img {
+    width: 50px; 
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#coelhos-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    width: 100%; 
+}
+
+.coelho {
+    width: 150px;
+    height: auto; 
+}
+
+.voltar{
+    background-color: var(--cor-acento);
+    color: var(--cor-texto);
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    margin: 0 auto;
+    text-decoration: none;
+    list-style: none;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.voltar:hover{
+    background-color: var(--cor-secundaria);
+}
+
+/* Animação de flutuação mais perceptível para o Coelho 1 */
+.coelho:nth-child(1) {
+    animation: flutuacao1 4s ease-in-out infinite;
+}
+
+@keyframes flutuacao1 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px); /* Sobe 40px */
+    }
+}
+
+/* Animação de flutuação mais perceptível para o Coelho 2 */
+.coelho:nth-child(2) {
+    animation: flutuacao2 5s ease-in-out infinite;
+}
+
+@keyframes flutuacao2 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-45px); /* Sobe 45px */
+    }
+}
+
+/* Animação de flutuação mais perceptível para o Coelho 3 */
+.coelho:nth-child(3) {
+    animation: flutuacao3 6s ease-in-out infinite;
+}
+
+@keyframes flutuacao3 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px); /* Sobe 50px */
+    }
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    .quiz-container {
+        padding: 20px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .coelho {
+        width: 120px;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+    }
+
+    #pergunta {
+        font-size: 0.9rem;
+    }
+
+    #ovinhos {
+        font-size: 16px;
+    }
+
+    #proxima-pergunta {
+        font-size: 0.9rem;
+    }
+
+    .voltar {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-container {
+        padding: 15px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .coelho {
+        width: 100px;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    #pergunta {
+        font-size: 0.8rem;
+    }
+
+    #ovinhos {
+        font-size: 14px;
+    }
+
+    #proxima-pergunta {
+        font-size: 0.8rem;
+    }
+
+    .voltar {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
