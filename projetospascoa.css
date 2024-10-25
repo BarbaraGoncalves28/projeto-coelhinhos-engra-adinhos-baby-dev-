@@ -5,21 +5,18 @@
     border: none;
     outline: none;
     list-style: none;
-    max-width: 100%;
 }
 
 body {
+    font-family: 'Pacifico', cursive;
+    background: url('img/fundo.jpg') no-repeat center center;
+    background-size: cover;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Pacifico', cursive;
+    color: #fff;
+    text-align: center;
     overflow-x: hidden;
-    background-image: url('img/fundo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-attachment: fixed;
 }
 
 :root {
