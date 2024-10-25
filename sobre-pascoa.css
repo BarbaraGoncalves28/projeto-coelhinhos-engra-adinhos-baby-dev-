@@ -6,6 +6,7 @@
     text-decoration: none;
     border: none;
     outline: none;
+    max-width: 100%;
 }
 
 body{
@@ -58,6 +59,7 @@ body{
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .image-container {
@@ -144,6 +146,7 @@ button {
     transition: background-color 0.3s;
     margin: 20px auto;
     display: block;
+    font-family: 'Dancing Script';
 }
 
 button:hover {
@@ -187,10 +190,17 @@ button:hover {
 }
 
 @media (max-width: 640px){
-    .content{
-        max-width: 300px;
-        display: flex;
-        justify-content: center;
+    #sobre-pascoa {
+        height: auto; /* Permite que o contêiner se ajuste à altura do conteúdo */
+        padding: 20px; /* Ajuste o padding conforme necessário */
+    }
+
+    .content {
+        width: 60%; /* Ajuste para uma largura maior se necessário */
+        max-width: 400px; /* Mantém a largura máxima do contêiner */
+        margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+        padding: 10px; /* Ajusta o padding se necessário */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destaque */
     }
 }
 
