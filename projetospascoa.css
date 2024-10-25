@@ -5,6 +5,7 @@
     border: none;
     outline: none;
     list-style: none;
+    max-width: 100%;
 }
 
 body {
@@ -13,9 +14,11 @@ body {
     box-sizing: border-box;
     font-family: 'Pacifico', cursive;
     overflow-x: hidden;
-    background-image: url('img/fundo.jpg'); 
-    background-size: cover; 
-    height: 100vh; 
+    background-image: url('img/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     background-attachment: fixed;
 }
 
@@ -136,6 +139,7 @@ button {
     display: flex;
     margin: 0 auto;
     list-style: none;
+    font-family: 'Dancing Script', cursive;
 }
 
 button:hover {
@@ -177,6 +181,12 @@ button:hover {
 /* RESPONSIVIDADE EM PROJETOS */
 
 @media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Desativa o efeito de fundo fixo */
+        background-size: cover; /* Garante que a imagem preencha a tela sem distorções */
+        background-position: center; /* Centraliza a imagem */
+    }
+    
     .projects-section {
         padding: 30px;
         margin: 30px auto;

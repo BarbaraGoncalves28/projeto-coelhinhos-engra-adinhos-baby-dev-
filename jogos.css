@@ -2,20 +2,21 @@
 
 body {
     font-family: 'Pacifico', cursive;
-    background: url('img/fundo.jpg') no-repeat center center fixed;
+    background: url('img/fundo.jpg') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #fff;
     text-align: center;
+    overflow-x: hidden;
 }
 
 *{
     border: none;
     outline: none;
-    text-decoration: none;   
+    text-decoration: none;  
+    max-width: 100%; 
 }
 
 :root {
@@ -157,6 +158,12 @@ button:hover {
 /* RESPONSIVIDADE SEÇÃO DA INTRODUÇÃP */
 
 @media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Desativa o parallax em dispositivos móveis */
+        background-size: cover; /* Garante que a imagem cubra a tela sem distorções */
+        background-position: center center; /* Centraliza a imagem corretamente */
+    }
+    
     .intro-section {
         margin: 15px;
         padding: 15px;

@@ -3,7 +3,7 @@
 
 /* Efeito Parallax */
 .parallax {
-    background-image: url('img/fundo.jpg'); /* Substitua pelo caminho correto */
+    background-image: url('img/fundo.jpg');
     min-height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -14,7 +14,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; 
+    z-index: -1;
 }
 
 *{
@@ -31,6 +31,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    width: 100%;
     overflow-x: hidden;
 }
 

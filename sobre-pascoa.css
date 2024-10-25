@@ -12,7 +12,7 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background: url('img/fundo.jpg') no-repeat center center fixed;
+    background: url('img/fundo.jpg') no-repeat center center;
     background-size: cover;
     font-family: 'Pacifico', cursive;
     overflow-x: hidden;
@@ -163,6 +163,15 @@ button:hover {
     .floating-image{
         max-width: 100px;
         height: 100px;
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Desativa o parallax em dispositivos móveis */
+        background-position: center center;
+        background-size: cover; /* Mantém o tamanho correto sem esticar */
     }
 }
 

@@ -4,16 +4,21 @@
     border: none;
     outline: none;
     text-decoration: none;
+    max-width: 100%;
 }
 
 body {
     font-family: 'Pacifico', cursive;
-    background-image: url('img/fundo.jpg'); 
+    background-image: url('img/fundo.jpg');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
     text-align: center;
     margin: 0;
     padding: 20px;
+    background-attachment: fixed; /* Parallax para telas grandes */
+    overflow-x: hidden; 
 }
 
 :root {
@@ -54,9 +59,12 @@ h1 {
     font-size: 1rem;
 }
 
+button{
+    font-family: 'Dancing Script';
+}
+
 .btn {
     display: inline-block;
-    font-family: 'Dancing Script';
     margin: 5px;
     padding: 3px 8px;
     font-size: 1.4rem;
@@ -194,6 +202,12 @@ h1 {
 /* RESPONSIVIDADE */
 
 @media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Desativa o parallax em dispositivos móveis */
+        background-size: cover;
+        background-position: center center; /* Mantém a imagem centralizada */
+    }
+    
     .quiz-container {
         padding: 20px;
         height: auto;
