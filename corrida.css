@@ -8,13 +8,14 @@ body {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
-    height: 100vh; 
+    max-width: 100%; 
 }
 
 *{
     border: none;
     outline: none;
     text-decoration: none;
+    max-width: 100%;
 }
 
 .background-blur {
@@ -122,6 +123,7 @@ button {
     transition: background-color 0.3s;
     margin: 20px auto;
     display: block;
+    font-family: 'Dancing Script';
 }
 
 .voltar:hover{
